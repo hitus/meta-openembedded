@@ -68,7 +68,7 @@ RDEPENDS_packagegroup-meta-oe-connectivity ="\
     ser2net smstools3 telepathy-glib telepathy-idle thrift \
     usbmuxd wvstreams zabbix zeromq \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "obex-data-server", "", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "pulseadio bluez4", "libmikmod", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "pulseaudio bluez4", "libmikmod", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "bluez4", "obexftp openobex libnet wvdial", "", d)} \
     "
 
@@ -197,7 +197,7 @@ RDEPENDS_packagegroup-meta-oe-multimedia ="\
     mplayer-common opus-tools \
     sound-theme-freedesktop v4l-utils yavta wavpack libvpx \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "xpext pavucontrol xsp", "", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "pulseadio bluez4", "libmikmod", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "pulseaudio bluez4", "libmikmod", "", d)} \
     ${@bb.utils.contains("LICENSE_FLAGS_WHITELIST", "commercial", "libmad faad2 mpv", "", d)} \
     "
 RDEPENDS_packagegroup-meta-oe-multimedia_remove_libc-musl = "alsa-oss"
@@ -205,13 +205,13 @@ RDEPENDS_packagegroup-meta-oe-multimedia_remove_libc-musl = "alsa-oss"
 RDEPENDS_packagegroup-meta-oe-navigation ="\
     geoclue geos libspatialite proj \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "orrery", "", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "bluz4", "gpsd gpsd-machine-conf", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "bluez4", "gpsd gpsd-machine-conf", "", d)} \
     "
 
 RDEPENDS_packagegroup-meta-oe-security ="\
     tomoyo-tools \
     ${@bb.utils.contains("DISTRO_FEATURES", "pam", "passwdqc", "", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "bluz5", "nmap", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "bluez5", "nmap", "", d)} \
     "
 
 RDEPENDS_packagegroup-meta-oe-shells ="\
@@ -249,7 +249,7 @@ RDEPENDS_packagegroup-meta-oe-support ="\
     vim vim-tiny websocketpp wmiconfig xdelta3 xdg-user-dirs xmlstarlet \
     zbar zile \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11", "geis toscoterm uim synergy utouch-mtview links-x11 fltk pidgin-otr", "", d)} \
-    ${@bb.utils.contains("DISTRO_FEATURES", "pulseadio bluez4", "libcanberra", "", d)} \
+    ${@bb.utils.contains("DISTRO_FEATURES", "pulseaudio bluez4", "libcanberra", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "x11 pam", "xorgxrdp xrdp", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "bluez4", "procmail", "", d)} \
     ${@bb.utils.contains("DISTRO_FEATURES", "polkit", "udisks udisks2 upower", "", d)} \
